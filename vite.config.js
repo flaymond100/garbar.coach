@@ -6,6 +6,7 @@ import react from '@vitejs/plugin-react';
 // (rewrite all unknown paths to /index.html — SPA fallback).
 export default defineConfig({
   plugins: [react()],
+  base: '/',
   server: {
     port: 5173,
     open: '/ru',
