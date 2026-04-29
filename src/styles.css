@@ -473,6 +473,9 @@ main, header, section, footer { position: relative; z-index: 1; }
 @media (max-width: 900px) {
   .hero-display { grid-column: 1 / -1; }
   .hero-photo { grid-column: 1 / -1; aspect-ratio: 4 / 3; }
+  .hero-photo .img {
+    transform: translate3d(calc(var(--tx, 0px) * -0.35), calc(var(--ty, 0px) * -0.35), 26px) scale(1.03);
+  }
   .hero-metrics { grid-template-columns: 1fr 1fr; }
   .hero-metrics .metric:nth-child(2) { border-right: none; }
   .hero-metrics .metric:nth-child(1), .hero-metrics .metric:nth-child(2) { border-bottom: 1px solid var(--rule); }
@@ -602,6 +605,16 @@ main, header, section, footer { position: relative; z-index: 1; }
   content: ""; position: absolute; inset: 0;
   background:
     repeating-linear-gradient(45deg, rgba(255,255,255,0.04) 0 8px, transparent 8px 16px);
+  z-index: 1;
+}
+.case-photo-img {
+  position: absolute; inset: 0;
+  background-image: url("/assets/kosta-2.jpg");
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  filter: contrast(1.05) saturate(0.7) brightness(0.9);
+  z-index: 0;
 }
 .case-photo .ph-tag {
   position: absolute; bottom: 12px; left: 12px; right: 12px;
@@ -681,6 +694,16 @@ main, header, section, footer { position: relative; z-index: 1; }
   content: ""; position: absolute; inset: 0;
   background:
     repeating-linear-gradient(45deg, rgba(255,255,255,0.04) 0 8px, transparent 8px 16px);
+  z-index: 1;
+}
+.bio-portrait-img {
+  position: absolute; inset: 0;
+  background-image: url("/assets/kosta-1.webp");
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  filter: contrast(1.05) saturate(0.7) brightness(0.9);
+  z-index: 0;
 }
 .bio-portrait .badge {
   position: absolute; top: 12px; left: 12px;

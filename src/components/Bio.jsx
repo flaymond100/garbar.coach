@@ -11,6 +11,7 @@ export default function Bio({ t }) {
       <section className="bio" id="bio">
         <div className="wrap bio-grid">
           <div className="bio-portrait">
+            <div className="bio-portrait-img" />
             <div className="badge">{b.badge}</div>
             <div className="ph-tag">
               <span>{b.photoTag[0]}</span>
