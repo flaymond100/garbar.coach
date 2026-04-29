@@ -27,7 +27,7 @@ export default {
       { lbl: 'FINISH RATE',     v: '100', u: '%', mod: 'ok',   id: 'M.03', w: '100%' },
       { lbl: 'BURN-OUT RISK',   v: 'LOW', u: '',  mod: 'warn', id: 'M.04', w: '18%' },
     ],
-    photo: { tl: 'SUBJECT: COACH', tr: 'REC ●', bl: '04:51:22 · MALLORCA', br: 'FRAME 042' },
+    photo: { tl: 'SUBJECT: COACH', tr: 'REC ●', bl: '04:30:25 · Krakow', br: 'FRAME 042' },
   },
 
   ticker: [
