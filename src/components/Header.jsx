@@ -35,11 +35,11 @@ export default function Header({ t, lang }) {
           <a href="#faq" onClick={(e) => go(e, 'faq')}>{t.nav.faq}</a>
         </nav>
         <div className="site-header-right">
-          <div className="lang-switch" aria-label="language">
+          {/* <div className="lang-switch" aria-label="language">
             <Link to="/ru" className={lang === 'ru' ? 'is-active' : ''}>RU</Link>
             <span className="lang-divider">/</span>
             <Link to="/ua" className={lang === 'ua' ? 'is-active' : ''}>UA</Link>
-          </div>
+          </div> */}
           <a className="site-cta" href="https://wa.me/4915116343656" target="_blank" rel="noreferrer">
             <span>{t.nav.contact}</span><span className="arrow">↗</span>
           </a>
