@@ -1,7 +1,49 @@
+import { useRef } from 'react';
+
 export default function Hero({ t }) {
   const [a, burnLbl, burnEm, restLbl, restEm] = t.hero.title;
   const [ledeA, ledeB, ledeC] = t.hero.lede;
   const waUrl = `https://wa.me/4915116343656?text=${encodeURIComponent(t.hero.waPrimary)}`;
+  const photoRef = useRef(null);
+
+  const updateTilt = (clientX, clientY) => {
+    const el = photoRef.current;
+    if (!el) return;
+
+    const rect = el.getBoundingClientRect();
+    const px = (clientX - rect.left) / rect.width;
+    const py = (clientY - rect.top) / rect.height;
+
+    const rx = (0.5 - py) * 14;
+    const ry = (px - 0.5) * 16;
+    const tx = (px - 0.5) * 18;
+    const ty = (py - 0.5) * 18;
+
+    el.style.setProperty('--rx', `${rx.toFixed(2)}deg`);
+    el.style.setProperty('--ry', `${ry.toFixed(2)}deg`);
+    el.style.setProperty('--tx', `${tx.toFixed(2)}px`);
+    el.style.setProperty('--ty', `${ty.toFixed(2)}px`);
+    el.style.setProperty('--gx', `${(px * 100).toFixed(1)}%`);
+    el.style.setProperty('--gy', `${(py * 100).toFixed(1)}%`);
+  };
+
+  const resetTilt = () => {
+    const el = photoRef.current;
+    if (!el) return;
+
+    el.style.setProperty('--rx', '0deg');
+    el.style.setProperty('--ry', '0deg');
+    el.style.setProperty('--tx', '0px');
+    el.style.setProperty('--ty', '0px');
+    el.style.setProperty('--gx', '50%');
+    el.style.setProperty('--gy', '50%');
+  };
+
+  const onTouchMove = (e) => {
+    const touch = e.touches[0];
+    if (!touch) return;
+    updateTilt(touch.clientX, touch.clientY);
+  };
 
   return (
     <section className="hero" id="top">
@@ -24,7 +66,14 @@ export default function Hero({ t }) {
             </div>
           </div>
 
-          <div className="hero-photo">
+          <div
+            className="hero-photo interactive-3d"
+            ref={photoRef}
+            onMouseMove={(e) => updateTilt(e.clientX, e.clientY)}
+            onMouseLeave={resetTilt}
+            onTouchMove={onTouchMove}
+            onTouchEnd={resetTilt}
+          >
             <div className="img" />
             <div className="scan" />
             <div className="corners"><span /><span /><span /><span /></div>
