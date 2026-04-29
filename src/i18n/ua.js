@@ -195,7 +195,7 @@ export default {
     contacts: [
       { ch: '/ WHATSAPP — FAST',  v: '+49 151 1634 3656', sub: 'звичайна відповідь — упродовж години у денний час', href: 'https://wa.me/4915116343656?text=%D0%9F%D1%80%D0%B8%D0%B2%D1%96%D1%82%2C%20%D1%86%D1%96%D0%BA%D0%B0%D0%B2%D0%B8%D1%82%D1%8C%20%D0%BA%D0%BE%D1%83%D1%87%D0%B8%D0%BD%D0%B3' },
       { ch: '/ INSTAGRAM — DM',   v: '@garbar.kos',        sub: 'тренування, гонки, закулісся — стрічка та сторіс',  href: 'https://instagram.com/garbar.kos' },
-      { ch: '/ EMAIL — DETAIL',   v: 'hello@garbar.coach', sub: 'для довгих листів і підготовчих бриф-файлів',        href: 'mailto:hello@garbar.coach' },
+      { ch: '/ EMAIL — DETAIL',   v: 'kostiantyn.garbar@gmail.com', sub: 'для довгих листів і підготовчих бриф-файлів',        href: 'mailto:kostiantyn.garbar@gmail.com' },
     ],
     foot: ['RESPONSE TIME · ', '< 24H · CET', 'SEASON \'26 · ', '03 SLOTS LEFT', 'RU · UA · EN · DE'],
   },

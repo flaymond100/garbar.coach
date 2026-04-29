@@ -195,7 +195,7 @@ export default {
     contacts: [
       { ch: '/ WHATSAPP — FAST',  v: '+49 151 1634 3656', sub: 'обычный ответ — в течение часа в дневное время', href: 'https://wa.me/4915116343656?text=Привет%2C%20интересует%20коучинг' },
       { ch: '/ INSTAGRAM — DM',   v: '@garbar.kos',        sub: 'тренировки, гонки, закулисье — лента и сторис',     href: 'https://instagram.com/garbar.kos' },
-      { ch: '/ EMAIL — DETAIL',   v: 'hello@garbar.coach', sub: 'для длинных писем и подготовительных бриф-файлов',  href: 'mailto:hello@garbar.coach' },
+      { ch: '/ EMAIL — DETAIL',   v: 'kostiantyn.garbar@gmail.com', sub: 'для длинных писем и подготовительных бриф-файлов',  href: 'mailto:kostiantyn.garbar@gmail.com' },
     ],
     foot: ['RESPONSE TIME · ', '< 24H · CET', 'SEASON \'26 · ', '03 SLOTS LEFT', 'RU · UA · EN · DE'],
   },
