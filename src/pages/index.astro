@@ -1,3 +1,35 @@
 ---
-return Astro.redirect('/ru', 302);
+import Layout from '../layouts/Layout.astro';
+import { getDict } from '../i18n/index.js';
+import CursorBlob from '../components/CursorBlob.jsx';
+import Header from '../components/Header.jsx';
+import Hero from '../components/Hero.jsx';
+import Ticker from '../components/Ticker.jsx';
+import Case from '../components/Case.jsx';
+import Bio from '../components/Bio.jsx';
+import Program from '../components/Program.jsx';
+import Philosophy from '../components/Philosophy.jsx';
+import Voices from '../components/Voices.jsx';
+import FAQ from '../components/FAQ.jsx';
+import Finale from '../components/Finale.jsx';
+import Foot from '../components/Foot.jsx';
+
+const t = getDict('ru');
+const lang = 'ru';
 ---
+<Layout meta={t.meta} lang={lang} canonicalPath="/">
+  <div class="hud-grid"></div>
+  <div class="hud-noise"></div>
+  <CursorBlob client:load />
+  <Header t={t} lang={lang} client:load />
+  <Hero t={t} client:load />
+  <Ticker t={t} />
+  <Case t={t} />
+  <Bio t={t} />
+  <Program t={t} />
+  <Philosophy t={t} />
+  <Voices t={t} />
+  <FAQ t={t} client:load />
+  <Finale t={t} />
+  <Foot t={t} />
+</Layout>
