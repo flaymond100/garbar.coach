@@ -1,8 +1,53 @@
 ---
 import '../styles.css';
 
-const { meta, lang, canonicalPath } = Astro.props;
+const { meta, lang, canonicalPath, faqSchema } = Astro.props;
 const canonical = `https://garbar.coach${canonicalPath}`;
+
+const personSchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Константин Гарбар",
+  "jobTitle": "Тренер по триатлону и велоспорту",
+  "url": "https://garbar.coach",
+  "image": "https://garbar.coach/assets/kosta-2.jpg",
+  "email": "kostiantyn.garbar@gmail.com",
+  "telephone": "+4915116343656",
+  "sameAs": ["https://www.instagram.com/garbar.kos/"],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Leipzig",
+    "addressCountry": "DE"
+  },
+  "knowsAbout": ["Triathlon", "Cycling", "Ironman 70.3", "Endurance Sports"],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Триатлон-коучинг",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "name": "Старт",
+        "price": "199",
+        "priceCurrency": "EUR",
+        "description": "Готовый план тренировок, один созвон в месяц, связь в мессенджере"
+      },
+      {
+        "@type": "Offer",
+        "name": "Про — персональный коучинг",
+        "price": "350",
+        "priceCurrency": "EUR",
+        "description": "Персональный план с еженедельной корректировкой, анализ данных Garmin/Wahoo"
+      },
+      {
+        "@type": "Offer",
+        "name": "Элит",
+        "price": "550",
+        "priceCurrency": "EUR",
+        "description": "Максимальное сопровождение: два созвона, разбор техники, нутрициология"
+      }
+    ]
+  }
+});
 ---
 <!doctype html>
 <html lang={meta.lang}>
@@ -15,6 +60,9 @@ const canonical = `https://garbar.coach${canonicalPath}`;
   <title>{meta.title}</title>
   <meta name="description" content={meta.description} />
   <link rel="canonical" href={canonical} />
+  <link rel="alternate" hreflang="ru" href="https://garbar.coach/" />
+  <link rel="alternate" hreflang="uk" href="https://garbar.coach/ua/" />
+  <link rel="alternate" hreflang="x-default" href="https://garbar.coach/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="GARBAR" />
   <meta property="og:locale" content={lang === 'ru' ? 'ru_RU' : 'uk_UA'} />
@@ -30,6 +78,8 @@ const canonical = `https://garbar.coach${canonicalPath}`;
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script type="application/ld+json" set:html={personSchema} />
+  {faqSchema && <script type="application/ld+json" set:html={faqSchema} />}
 </head>
 <body>
   <slot />

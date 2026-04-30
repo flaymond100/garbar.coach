@@ -74,7 +74,7 @@ export default function Hero({ t }) {
             onTouchMove={onTouchMove}
             onTouchEnd={resetTilt}
           >
-            <div className="img" />
+            <div className="img"><img src="/assets/kosta-2.jpg" alt={t.hero.imgAlt} width="600" height="800" loading="eager" /></div>
             <div className="scan" />
             <div className="corners"><span /><span /><span /><span /></div>
             <div className="crosshair" />

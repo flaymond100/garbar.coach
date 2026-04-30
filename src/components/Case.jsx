@@ -12,7 +12,7 @@ export default function Case({ t }) {
         <div className="wrap">
           <div className="case-body">
             <div className="case-photo">
-              <div className="case-photo-img" />
+              <div className="case-photo-img"><img src="/assets/kosta-race.jpg" alt={c.imgAlt} width="600" height="800" loading="lazy" /></div>
               <div className="ph-tag">
                 <span>{c.photoTag[0]}</span>
                 <span>{c.photoTag[1]}</span>

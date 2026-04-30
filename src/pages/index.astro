@@ -16,20 +16,30 @@ import Foot from '../components/Foot.jsx';
 
 const t = getDict('ru');
 const lang = 'ru';
+
+const faqSchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": t.faq.items.map(item => ({
+    "@type": "Question",
+    "name": item.q,
+    "acceptedAnswer": { "@type": "Answer", "text": item.a }
+  }))
+});
 ---
-<Layout meta={t.meta} lang={lang} canonicalPath="/">
+<Layout meta={t.meta} lang={lang} canonicalPath="/" faqSchema={faqSchema}>
   <div class="hud-grid"></div>
   <div class="hud-noise"></div>
   <CursorBlob client:load />
   <Header t={t} lang={lang} client:load />
-  <Hero t={t} client:load />
+  <Hero t={t} client:visible />
   <Ticker t={t} />
   <Case t={t} />
   <Bio t={t} />
   <Program t={t} />
   <Philosophy t={t} />
   <Voices t={t} />
-  <FAQ t={t} client:load />
+  <FAQ t={t} client:visible />
   <Finale t={t} />
   <Foot t={t} />
 </Layout>

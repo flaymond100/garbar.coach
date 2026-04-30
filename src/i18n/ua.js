@@ -3,7 +3,7 @@ export default {
   meta: {
     lang: 'uk',
     title: 'GARBAR — Тренер з тріатлону та велоспорту · Віддалено · Лейпциг',
-    description: 'Тріатлон-коучинг для тих, у кого робота, родина і 8 годин на тиждень. Віддалено.',
+    description: 'Персональний коучинг з тріатлону та Ironman 70.3. Від €199/міс. Онлайн. Учасник ЧС, 100+ фінішів. Перша консультація безкоштовно.',
   },
 
   nav: {
@@ -28,6 +28,7 @@ export default {
       { lbl: 'BURN-OUT RISK',   v: 'LOW', u: '',  mod: 'warn', id: 'M.04', w: '18%' },
     ],
     photo: { tl: 'SUBJECT: COACH', tr: 'REC ●',  bl: '04:30:25 · Krakow', br: 'FRAME 042' },
+    imgAlt: 'Констянтин Гарбар на тренуванні',
   },
 
   ticker: [
@@ -53,6 +54,7 @@ export default {
     p2: 'План побудований навколо обмежень: басейн уранці, велостанок удома ввечері, довга — одна, у суботу. Жодних «подвійних» днів. Нуль пропущених тижнів.',
     byline: '— K. Garbar / coach',
     photoTag: ['// race-day · Stelvio, Italy', '1/8000s · f4 · ISO200'],
+    imgAlt: 'Ironman 70.3 Mallorca — фініш клієнта за 4:51',
     stats: [
       { lbl: 'FINISH TIME',         delta: '↗',     v: '04:51', sup: ':22' },
       { lbl: 'WEEKLY HOURS · AVG',  delta: 'REAL',  v: '8.4',   sup: 'h'   },
@@ -69,6 +71,7 @@ export default {
     head2: 'Тренер.',
     badge: 'SUBJECT 01',
     photoTag: ['// portrait · leipzig studio', '2025'],
+    imgAlt: 'Констянтин Гарбар — тренер з тріатлону та велоспорту, Лейпциг',
     creds: [
       { y: '2024',     t: 'Чемпіонат світу гранфондо',         d: 'Данія · учасник' },
       { y: '100+',     t: 'Фінішів',               d: 'різноманітних дистанцій' },

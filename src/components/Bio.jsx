@@ -11,7 +11,7 @@ export default function Bio({ t }) {
       <section className="bio" id="bio">
         <div className="wrap bio-grid">
           <div className="bio-portrait">
-            <div className="bio-portrait-img" />
+            <div className="bio-portrait-img"><img src="/assets/kosta-portrait.jpg" alt={b.imgAlt} width="600" height="800" loading="lazy" /></div>
             <div className="badge">{b.badge}</div>
             <div className="ph-tag">
               <span>{b.photoTag[0]}</span>
